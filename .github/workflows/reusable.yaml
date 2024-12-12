@@ -8,7 +8,7 @@ on:
 
 jobs:
   generate-output:
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     outputs:
       date: ${{ steps.date-step.outputs.date }}
     steps:
