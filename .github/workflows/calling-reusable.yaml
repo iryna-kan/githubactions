@@ -8,6 +8,7 @@ jobs:
         uses: ./.github/workflows/reusable.yaml
   using-reusable-output:
     needs: calling-reusable-wf
+    runs-on: ubuntu-latest
     steps:
       - run: echo ${{ needs.calling-reusable-wf.outputs.date }}
   
