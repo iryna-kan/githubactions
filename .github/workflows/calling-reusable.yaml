@@ -1,0 +1,13 @@
+name: Calling reusable workflow
+on:
+  workflow_dispatch:
+jobs:
+  calling-reusable-wf:
+    steps: 
+      - name: Calling workflow
+        uses: ./.github/workflows/reusable.yaml
+  using-reusable-output:
+    needs: calling-reusable-wf
+    steps:
+      - run: echo ${{ needs.calling-reusable-wf.outputs.date }}
+  
