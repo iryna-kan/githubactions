@@ -3,9 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   calling-reusable-wf:
-    steps: 
-      - name: Calling workflow
-        uses: ./.github/workflows/reusable.yaml
+    uses: ./.github/workflows/reusable.yaml
   using-reusable-output:
     needs: calling-reusable-wf
     runs-on: ubuntu-latest
